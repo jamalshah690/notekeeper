@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:notekeeper/Core/Controllers/auth_controller.dart';
-import 'package:notekeeper/UI/Screens/Authentication/forgot_passwprd_screen.dart';
-import 'package:notekeeper/UI/Screens/Authentication/signup_screen.dart';
 import 'package:notekeeper/UI/Screens/Task%20screeens/tasks_screen.dart';
 import 'package:notekeeper/UI/custom_widgets/background_images.dart';
 import 'package:notekeeper/UI/custom_widgets/custom_buttons.dart';
@@ -23,7 +20,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
-  final auth = Get.find<AuthController>();
+
   @override
   Widget build(BuildContext context) {
     return Background(
@@ -35,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 45),
+                const SizedBox(height: 220),
                 const Center(
                   child: Text(
                     'Hello Again!',
@@ -57,91 +54,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 70),
-                CustomTextField(
-                  prefixIcon: const Icon(
-                    Icons.alternate_email,
-                    color: kPrimaryColor,
-                  ),
-                  controller: emailController,
-                  hintText: 'Email',
-                ),
-                const SizedBox(height: 15),
-                CustomTextField(
-                  prefixIcon: const Icon(
-                    Icons.lock_open,
-                    color: kPrimaryColor,
-                  ),
-                  controller: passController,
-                  obscure: !auth.isPasswordVisible,
-                  hintText: 'Password',
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      auth.togglePasswordVisibility();
-                    },
-                    icon: Icon(
-                      auth.isPasswordVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      Get.to(() => const ForgotPasswordScreen());
-                    },
-                    child: const Text(
-                      'Recovery Password',
-                      style: TextStyle(color: kBlack),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 20.0),
                 MyButtonLong(
-                    name: 'Sign In',
+                    name: 'Continue with Guest ',
                     onTap: () {
-                      if (emailController.text.isEmpty ||
-                          passController.text.isEmpty) {
-                        return CustomSnackBar.showError(
-                            'Please fill all the fields');
-                      }
                       Get.offAll(() => const TasksScreen());
                     }),
                 const SizedBox(height: 20.0),
-                // Row(
-                //   children: const [
-                //     SizedBox(width: 20),
-                //     Expanded(child: Divider(color: kBlack)),
-                //     SizedBox(width: 20),
-                //     Text('OR'),
-                //     SizedBox(width: 20),
-                //     Expanded(child: Divider(color: kBlack)),
-                //     SizedBox(width: 20),
-                //   ],
-                // ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Not a Member?",
-                      style: TextStyle(
-                          fontSize: 15.0, color: kBlack.withOpacity(0.4)),
-                    ),
-                    TextButton(
-                        onPressed: () {
-                          Get.to(() => const SignUpScreen());
-                        },
-                        child: const Text(
-                          'Register Now',
-                          style: TextStyle(color: kBlack),
-                        ))
-                  ],
-                ),
-                const SizedBox(height: 15.0),
               ],
             ),
           ),

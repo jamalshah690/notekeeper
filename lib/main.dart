@@ -5,7 +5,6 @@ import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:notekeeper/Core/Constants/colors.dart';
 import 'package:notekeeper/Core/Constants/strings.dart';
-import 'package:notekeeper/Core/Controllers/auth_controller.dart';
 import 'package:notekeeper/Core/Controllers/task_controller.dart';
 import 'package:notekeeper/UI/Screens/Authentication/login_screen.dart';
 import 'package:notekeeper/UI/Screens/Task%20screeens/tasks_screen.dart';
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(TaskController());
-    Get.put(AuthController());
+
     return GetMaterialApp(
       title: 'ToDo app',
       theme: ThemeData(
