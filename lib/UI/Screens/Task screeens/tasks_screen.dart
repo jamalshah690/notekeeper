@@ -89,11 +89,16 @@ class _TasksScreenState extends State<TasksScreen> {
                                   child: Padding(
                                     padding: const EdgeInsets.only(top: 150),
                                     child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(23.0)
-                                              .copyWith(bottom: 0),
-                                          child: LottieBuilder.asset(
+                                              .copyWith(
+                                                  bottom: 23,
+                                                  left: 0,
+                                                  right: 0),
+                                          child: Image.asset(
                                             ImagesUrls.notFound,
                                             width: 150,
                                             height: 150,
@@ -201,8 +206,9 @@ class _TasksScreenState extends State<TasksScreen> {
                             )
                       : Center(
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Lottie.asset(
+                              Image.asset(
                                 ImagesUrls.errorImage,
                                 width: 150,
                                 height: 150,
