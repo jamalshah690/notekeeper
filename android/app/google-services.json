@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64793288797",
+    "project_id": "zeepalmtodoapp",
+    "storage_bucket": "zeepalmtodoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64793288797:android:18ed8966fb71fe09286db4",
+        "android_client_info": {
+          "package_name": "com.example.notekeeper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWdI_-vilaiJqfiFrL7l8sphlxqEgV06o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

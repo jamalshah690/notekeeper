@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAZlmifbISciMRG5Svwc1UdjKUKhpLefFQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>64793288797</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.haztechTask</string>
+	<key>PROJECT_ID</key>
+	<string>zeepalmtodoapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zeepalmtodoapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:64793288797:ios:e4fe700c3d3a8f0d286db4</string>
+</dict>
+</plist>
